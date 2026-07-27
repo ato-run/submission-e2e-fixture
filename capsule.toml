@@ -1,0 +1,14 @@
+schema_version = "1"
+name = "submission-e2e-fixture"
+version = "1.0.0"
+
+[run]
+command = ["python3", "server.py", "--commit-label", "commit A with spaces"]
+
+[web]
+port = 8080
+bind = "0.0.0.0"
+
+[seal_at]
+command = ["python3", "verify.py"]
+timeout_seconds = 30
