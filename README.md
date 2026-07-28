@@ -7,6 +7,8 @@ Minimal public source fixture for the Capsule Submission Wizard E2E.
 - `GET /health` returns `ok`
 - `GET /` returns the exact commit label supplied as one argv element
 - `GET /evidence` returns the observed argv and working directory
+- `seal_at.command` probes the disposable restore through the Firecracker
+  bridge address used by the current host-side acceptance executor
 
 The v1 runtime launches source capsules at `/app`; the E2E requires the
 `/evidence` response to report that exact working directory and preserve

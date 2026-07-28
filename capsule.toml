@@ -10,5 +10,5 @@ port = 8080
 bind = "0.0.0.0"
 
 [seal_at]
-command = ["python3", "verify.py"]
+command = ["python3", "-c", "import urllib.request; response = urllib.request.urlopen('http://172.16.0.2:8080/health', timeout=5); assert response.status == 200 and response.read() == b'ok'"]
 timeout_seconds = 30
